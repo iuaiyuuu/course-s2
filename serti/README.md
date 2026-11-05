@@ -57,5 +57,5 @@ Folder: [Lainnya](Lainnya/) — berkas gambar yang belum diidentifikasi.
 
 ## Catatan
 
-- Folder `DOUBLE/` berisi salinan sertifikat dengan nama berawalan NIM. Belum dihapus.
+- Folder `DOUBLE/` berisi sertifikat yang tidak ada padanannya di folder lain (Google Cybersecurity dan Google AI dari Coursera, IBM Code Generation, CISA dari Coursera, serta file teks `credly` dan `Google skill`).
 - Beberapa kursus punya lebih dari satu file (misalnya `Tools of the Trade`, `Play It Safe`, `Connect and Protect`). Itu salinan dengan nama berbeda; satu saja sudah cukup.
