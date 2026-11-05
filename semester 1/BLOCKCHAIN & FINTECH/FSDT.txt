@@ -1,0 +1,65 @@
+4. Technology and Financial Service
+
+SVARA dirancang sebagai kerangka layanan keuangan negara berbasis teknologi blockchain yang mengintegrasikan inovasi digital untuk memperkuat transparansi, akuntabilitas, dan efisiensi pengelolaan keuangan publik. Sistem ini memposisikan uang negara sebagai programmable public money melalui representasi digital dalam bentuk GovToken. Penting untuk ditekankan bahwa SVARA bukan merupakan mata uang kripto publik, melainkan sebuah infrastruktur keuangan digital yang didukung penuh oleh negara (state-backed digital financial infrastructure).
+
+Konsep GovToken sebagai Representasi Rupiah Negara
+
+GovToken adalah representasi digital dari mata uang Rupiah, di mana setiap 1 GovToken memiliki nilai setara dengan 1 Rupiah. Konsep ini menghilangkan volatilitas nilai yang kerap diasosiasikan dengan mata uang kripto publik, menjadikannya instrumen yang stabil dan dapat diandalkan untuk seluruh transaksi fiskal pemerintah. GovToken memungkinkan implementasi programmable public money, yaitu kemampuan untuk menyematkan aturan dan batasan penggunaan dana secara langsung ke dalam token itu sendiri. Dengan demikian, dana dapat secara otomatis dikunci, dilepaskan, atau ditransfer hanya jika kondisi spesifik yang telah ditetapkan dalam kebijakan fiskal terpenuhi, secara signifikan meningkatkan kontrol dan kepatuhan anggaran.
+
+Smart Contract sebagai Mekanisme Kontrol Fiskal Otomatis
+
+Inti dari operasional SVARA adalah penggunaan smart contract. Kontrak pintar ini berfungsi sebagai mekanisme kontrol fiskal otomatis yang mengelola dan mengeksekusi pengeluaran publik. Setiap transaksi, mulai dari alokasi anggaran, pengadaan barang/jasa, hingga pembayaran kepada vendor, akan diatur dan dieksekusi secara otomatis oleh smart contract. Mekanisme ini memastikan bahwa dana hanya dapat dialirkan sesuai dengan ketentuan yang telah disepakati dan diverifikasi, mengurangi intervensi manual serta potensi penyimpangan. Smart contract meningkatkan kepastian hukum dan meminimalisir risiko kesalahan atau penipuan dalam setiap tahap siklus keuangan.
+
+Blockchain Treasury & Dual Ledger
+
+SVARA akan mengoperasikan sistem treasury dan pencatatan (ledger) berbasis blockchain. Terdapat dua jenis ledger utama: ledger internal untuk operasional dan kerahasiaan data pemerintah, serta ledger publik untuk akuntabilitas eksternal. Semua transaksi keuangan negara akan tercatat secara permanen pada blockchain ledger, yang bersifat imutabel dan terverifikasi. Ledger publik memungkinkan pemantauan dan audit oleh pihak eksternal, termasuk masyarakat, secara real-time, sementara ledger internal memastikan integritas dan keamanan data operasional pemerintah. Arsitektur dual ledger ini memastikan keseimbangan antara kebutuhan kerahasiaan operasional dan tuntutan transparansi publik.
+
+QRIS sebagai Jalur Pembayaran Resmi Pemerintah Berbasis Blockchain
+
+Untuk memfasilitasi transaksi pembayaran, SVARA mengintegrasikan QRIS sebagai payment rail resmi pemerintah berbasis blockchain. Implementasi ini memungkinkan pembayaran yang cepat, efisien, dan aman kepada vendor atau penerima dana lainnya. Setiap pembayaran yang dilakukan melalui QRIS akan tercatat secara langsung pada blockchain, memastikan traceability dana dan meminimalkan risiko penipuan atau keterlambatan pembayaran. Sistem ini juga menyederhanakan proses rekonsiliasi dan verifikasi transaksi keuangan pemerintah.
+
+Sistem Pengadaan, Pembayaran, dan Settlement Digital
+
+SVARA menyediakan platform e-procurement yang terintegrasi dengan sistem pembayaran dan settlement digital berbasis blockchain. Seluruh proses pengadaan, mulai dari lelang hingga penetapan pemenang dan pembayaran, akan terekam dan dieksekusi secara digital. Ini tidak hanya meningkatkan efisiensi operasional dan mengurangi birokrasi, tetapi juga memperkuat transparansi dalam setiap tahapan pengadaan. Proses settlement yang terotomatisasi memastikan bahwa dana ditransfer dengan cepat dan akurat setelah validasi kontrak dan penyelesaian layanan.
+
+Audit, Pengawasan, dan Kepatuhan Berbasis Teknologi
+
+Dengan adanya blockchain, SVARA memungkinkan implementasi sistem audit dan pengawasan real-time melalui teknologi regulasi dan teknologi pengawasan. Lembaga pengawas dapat secara otomatis memverifikasi kepatuhan terhadap peraturan dan standar keuangan negara secara berkelanjutan. Data transaksi yang imutabel pada blockchain mempermudah proses audit, mengurangi kebutuhan akan audit manual yang memakan waktu, dan meningkatkan kemampuan untuk mendeteksi anomali atau potensi kecurangan secara proaktif. RegTech dan SupTech memungkinkan regulator untuk memantau aktivitas secara real-time dan memberikan respons instan jika terdeteksi aktivitas mencurigakan atau tidak sesuai.
+
+Infrastruktur Blockchain Tingkat Pemerintahan (Permissioned, PoA + PoS)
+
+Infrastruktur blockchain SVARA akan bersifat permissioned, yang berarti hanya pihak-pihak yang memiliki otorisasi yang dapat berpartisipasi dalam jaringan. Ini memastikan kontrol yang ketat dan keamanan data sensitif pemerintah. Mekanisme konsensus yang digunakan kemungkinan besar adalah kombinasi Proof of Authority dan Proof of Stake, yang memberikan keseimbangan antara efisiensi, keamanan, dan desentralisasi yang terkontrol. Pendekatan permissioned blockchain memungkinkan administrasi publik untuk bertindak sebagai validator dalam sistem, menjaga kemampuan untuk mengintervensi dan mengoreksi transaksi jika diperlukan, sambil tetap mendistribusikan tanggung jawab kualitas data.
+
+5. Diagram Transaksi
+
+Alur transaksi dalam sistem SVARA dirancang untuk memastikan setiap tahapan pengelolaan keuangan negara terintegrasi, transparan, dan akuntabel melalui pemanfaatan teknologi blockchain. Berikut adalah penjelasan langkah demi langkah dari alur transaksi tersebut:
+
+
+
+
+
+Penetapan dan Penguncian Anggaran: Proses dimulai dengan penetapan anggaran oleh lembaga terkait. Setelah anggaran disetujui, alokasi dana untuk program atau kegiatan tertentu akan dikunci dalam bentuk GovToken di dompet digital atau akun escrow di dalam blockchain treasury. Penguncian ini dilakukan melalui smart contract yang menetapkan parameter penggunaan dana, termasuk jumlah, tujuan, dan periode penggunaan. Dana yang telah dikunci tidak dapat digunakan untuk tujuan lain sebelum kondisi yang ditetapkan smart contract terpenuhi.
+
+
+
+Proses Pengadaan Barang dan Jasa: Ketika suatu entitas pemerintah membutuhkan barang atau jasa, proses pengadaan dilakukan melalui platform e-procurement SVARA. Informasi mengenai kebutuhan, spesifikasi, dan anggaran akan diunggah ke dalam sistem, yang kemudian memfasilitasi proses tender atau penunjukan langsung sesuai dengan peraturan yang berlaku. Seluruh interaksi dan dokumen terkait pengadaan terekam pada blockchain.
+
+
+
+Validasi Dokumen dan Harga Wajar: Setelah pemilihan vendor atau penyedia barang/jasa, dokumen kontrak, spesifikasi teknis, dan harga penawaran akan melalui proses validasi digital. Smart contract dapat secara otomatis memverifikasi kesesuaian dokumen dengan persyaratan yang telah ditetapkan. Sistem juga dapat mengintegrasikan data pembanding untuk memastikan kewajaran harga, meminimalkan potensi mark-up atau praktik kolusi. Validasi ini memastikan bahwa semua persyaratan hukum dan administratif terpenuhi sebelum transaksi dapat berlanjut.
+
+
+
+Penguncian Dana dalam Escrow On-chain: Setelah validasi berhasil, dana GovToken yang sesuai dengan nilai kontrak akan secara otomatis dipindahkan dari akun anggaran yang dikunci ke sebuah akun escrow on-chain yang dikelola oleh smart contract. Dana ini berada dalam kondisi 'ditahan' dan hanya akan dilepaskan kepada vendor setelah syarat-syarat penyelesaian pekerjaan atau pengiriman barang terpenuhi dan diverifikasi. Ini adalah mekanisme keamanan untuk melindungi kepentingan negara dan memastikan vendor memenuhi kewajibannya.
+
+
+
+Pembayaran Vendor melalui QRIS: Setelah pekerjaan atau pengadaan selesai dan diverifikasi sesuai dengan persyaratan kontrak (misalnya, melalui laporan kemajuan, bukti pengiriman, atau hasil uji kualitas), smart contract akan secara otomatis memicu pelepasan dana dari akun escrow. Pembayaran kepada vendor dilakukan dalam bentuk GovToken melalui integrasi QRIS. Vendor dapat menerima pembayaran secara instan ke dompet digital mereka, yang kemudian dapat diuangkan ke Rupiah konvensional atau digunakan untuk transaksi lain dalam ekosistem digital pemerintah.
+
+
+
+Pencatatan Transaksi di Blockchain Ledger: Setiap tahapan transaksi, mulai dari penguncian anggaran, proses pengadaan, validasi, penguncian escrow, hingga pembayaran final, akan dicatat secara permanen dan berurutan pada blockchain ledger. Catatan ini bersifat imutabel, artinya tidak dapat diubah atau dihapus, menciptakan jejak audit yang lengkap dan transparan dari setiap aliran dana.
+
+
+
+Audit dan Pengawasan Real-time oleh Lembaga Terkait: Dengan adanya data transaksi yang tercatat secara transparan pada blockchain, lembaga audit dan pengawasan dapat melakukan pemantauan dan audit secara real-time. Smart contract juga dapat diprogram untuk secara otomatis memicu peringatan atau notifikasi jika terdeteksi adanya transaksi yang menyimpang dari aturan atau indikator kecurangan. Hal ini memungkinkan intervensi dini dan mengurangi waktu yang dibutuhkan untuk proses audit konvensional, meningkatkan efektivitas pengawasan keuangan negara.

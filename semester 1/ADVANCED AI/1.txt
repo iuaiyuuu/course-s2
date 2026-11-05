@@ -1,0 +1,9 @@
+from google.colab import files
+
+print("Silahkan unggah file Laptop.csv")
+uploaded = files.upload()
+
+for fn in uploaded.keys():
+  print(f'User uploaded file "{fn}" with length {len(uploaded[fn])} bytes')
+
+print("\nUnggahan selesai. Sekarang Anda bisa mencoba menjalankan ulang sel sebelumnya.")

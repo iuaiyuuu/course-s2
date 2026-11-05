@@ -1,0 +1,72 @@
+Berikut adalah outline slide PowerPoint untuk proposal penelitian tesis Anda, yang disusun secara sistematis berdasarkan materi dalam sumber:
+Slide 1: Judul Penelitian & Identitas
+• Judul: Pengembangan Model Prediksi Banjir Berbasis Data Meteorologi BMKG dengan Explainable Artificial Intelligence untuk Mengatasi Permasalahan Black Box dalam Pengambilan Keputusan.
+• Nama Mahasiswa: Muhammad Abiyyu Rahman.
+• Nomor Induk Mahasiswa: 25.51.1738.
+• Konsentrasi: Digital Transformation Intelligence, S2 Informatika.
+• Institusi: Program Pascasarjana, Universitas AMIKOM Yogyakarta, 2025.
+Slide 2: Latar Belakang Masalah
+• Urgensi sistem prediksi banjir yang akurat akibat peningkatan dampak perubahan iklim dan urbanisasi.
+• Dominasi model ML/DL dalam mencapai akurasi tinggi namun bersifat black box yang sulit dipahami mekanismenya.
+• Keterbatasan transparansi menghambat kepercayaan pemangku kepentingan dalam pengambilan keputusan mitigasi.
+• Perlunya jembatan antara hasil teknis AI dengan narasi yang mudah dipahami oleh pengguna non-teknis.
+• Peluang integrasi XAI dan LLM untuk membangun trustworthy AI dalam manajemen bencana.
+Slide 3: Rumusan Masalah
+• Bagaimana mengembangkan model prediksi banjir berbasis data meteorologi BMKG menggunakan algoritma ML/DL sebagai model inti?
+• Bagaimana menerapkan pendekatan Explainable AI (XAI) untuk menjelaskan kontribusi variabel input terhadap hasil prediksi?
+• Bagaimana memanfaatkan LLM untuk menerjemahkan interpretasi XAI menjadi narasi penjelasan yang mudah dipahami pemangku kepentingan?
+Slide 4: Tujuan Penelitian
+• Membangun model prediksi banjir berbasis data resmi BMKG dengan performa prediktif yang optimal.
+• Mengimplementasikan teknik XAI untuk membedah kontribusi variabel meteorologi dan meningkatkan transparansi model.
+• Mengintegrasikan hasil XAI ke dalam LLM untuk menghasilkan narasi penalaran keputusan yang komunikatif.
+• Menyusun kerangka decision support system yang berbasis data dan dapat dipertanggungjawabkan.
+Slide 5: Batasan Penelitian
+• Data terbatas pada variabel meteorologi harian BMKG (curah hujan, suhu, kelembapan, kecepatan angin).
+• Fokus pada banjir daratan akibat faktor meteorologi, tidak mencakup banjir rob atau oseanografi.
+• Metode interpretasi dibatasi pada feature attribution (SHAP/LIME), bukan pendekatan kausalitas mendalam.
+• Penggunaan LLM eksklusif sebagai lapisan penalaran naratif, bukan untuk pelatihan model inti.
+• Hasil akhir berupa prototipe konseptual decision support system, bukan sistem operasional industri.
+Slide 6: Jenis & Pendekatan Penelitian
+• Jenis: Penelitian terapan berfokus pada pengembangan sistem cerdas (intelligent monitoring systems).
+• Pendekatan: Kuantitatif berbasis data (data-driven) dengan eksperimen algoritma ML/DL.
+• Metode: Pengembangan end-to-end AI pipeline (Prediksi-Interpretasi-Penalaran).
+• Paradigma: Pembangunan trustworthy AI melalui integrasi transparansi dan akuntabilitas model.
+Slide 7: Sumber & Karakteristik Data
+• Sumber: Data meteorologi harian resmi dari Badan Meteorologi, Klimatologi, dan Geofisika (BMKG).
+• Variabel: Intensitas curah hujan, temperatur udara, kelembapan, kecepatan angin, dan durasi matahari.
+• Format: Data deret waktu (time-series) yang memiliki pola non-linear dan dinamika tinggi.
+• Lingkup: Fokus pada faktor meteorologi daratan yang memengaruhi respons hidrologi.
+Slide 8: Praproses Data & Feature Engineering
+• Melakukan pembersihan data untuk mitigasi missing values dan outliers.
+• Menjalankan normalisasi data untuk menjaga konsistensi variabel dalam pemodelan.
+• Membentuk lag features dan rolling window untuk menangkap dependensi temporal.
+• Melakukan transformasi time-series guna mengoptimalkan input bagi arsitektur jaringan saraf.
+Slide 9: Pemodelan Prediktif (ML/DL)
+• Melatih model berbasis pohon keputusan menggunakan Random Forest dan XGBoost.
+• Mengembangkan arsitektur Deep Learning menggunakan CNN dan LSTM untuk data deret waktu.
+• Mengeksplorasi metode ensemble learning untuk meningkatkan stabilitas prediksi.
+• Mengevaluasi performa model menggunakan metrik Mean Absolute Error (MAE) dan RMSE.
+Slide 10: Explainable AI (XAI)
+• Menerapkan metode post-hoc XAI pada model prediktif yang telah dilatih.
+• Menggunakan SHAP untuk menganalisis kontribusi fitur secara global dan lokal.
+• Mengimplementasikan LIME untuk memberikan penjelasan lokal pada setiap titik prediksi banjir.
+• Menghasilkan visualisasi transparansi model untuk mengidentifikasi variabel meteorologi dominan.
+Slide 11: Decision Reasoning (LLM)
+• Mengintegrasikan output teknis dari lapisan XAI ke dalam prompt LLM.
+• Menerjemahkan feature attribution menjadi narasi penjelasan bahasa alami yang kontekstual.
+• Menghasilkan justifikasi prediksi untuk mendukung pengambilan keputusan peringatan dini.
+• Memvalidasi konsistensi antara hasil numerik model dengan narasi penalaran yang dihasilkan LLM.
+Slide 12: Kerangka Metodologi Penelitian
+• Tahap 1: Konsolidasi data BMKG dan rekayasa fitur time-series.
+• Tahap 2: Eksperimen pemodelan prediktif menggunakan algoritma ML/DL.
+• Tahap 3: Integrasi lapisan XAI untuk interpretasi kontribusi variabel.
+• Tahap 4: Pengembangan modul penalaran naratif berbasis LLM.
+• Tahap 5: Validasi sistem terintegrasi dan penyusunan laporan ilmiah.
+Slide 13: Luaran & Kontribusi Penelitian
+• Luaran: Prototipe konseptual sistem pendukung keputusan mitigasi banjir yang transparan.
+• Kontribusi Teoritis: Strategi pengurangan karakteristik black box melalui integrasi ML-XAI-LLM.
+• Kontribusi Praktis: Peningkatan kepercayaan pemangku kepentingan melalui justifikasi prediksi yang komunikatif.
+• Kontribusi Metodologis: Referensi penerapan end-to-end AI pipeline dalam bidang kebencanaan.
+
+--------------------------------------------------------------------------------
+Analogi untuk Memperjelas Konsep: Metodologi ini dapat diibaratkan seperti proses medis di rumah sakit. Model ML/DL adalah alat diagnosa canggih (seperti MRI) yang memberikan hasil akurat namun teknis; XAI berperan sebagai hasil lab yang merinci komponen kimia dalam tubuh; sedangkan LLM adalah dokter yang menerjemahkan data teknis tersebut menjadi penjelasan yang mudah dipahami pasien agar mereka berani mengambil tindakan pengobatan yang tepat.

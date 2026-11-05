@@ -1,0 +1,310 @@
+Berikut adalah revisi dan peningkatan kualitas laporan akademik Anda, dengan fokus pada standar Advanced Artificial Intelligence (level S2), menggunakan bahasa Indonesia akademik formal, dan mempertahankan struktur yang telah ada.
+
+
+
+Pengembangan Sistem Rekomendasi Laptop Berbasis Hybrid AI Menggunakan Rule-Based Reasoning dan Machine Learning
+
+1. Pendahuluan
+
+1.1 Latar Belakang
+
+Dalam paradigma pengambilan keputusan berbasis kecerdasan buatan, pendekatan machine learning murni, meskipun sangat powerful dalam identifikasi pola dan prediksi, seringkali dihadapkan pada dua keterbatasan fundamental: kurangnya interpretabilitas (masalah "kotak hitam") dan ketergantungan penuh pada data historis. Hal ini dapat menjadi penghalang krusial dalam domain yang membutuhkan akuntabilitas dan kemampuan untuk menjelaskan dasar dari setiap rekomendasi atau keputusan. Di sisi lain, Knowledge-Based System mampu merepresentasikan pengetahuan domain secara eksplisit dalam bentuk aturan yang mudah dipahami. Namun, KBS cenderung kaku, sulit beradaptasi terhadap variasi data yang tidak terduga, dan memerlukan pemeliharaan manual yang intensif ketika domain pengetahuan berkembang.
+
+Mata kuliah Advanced Artificial Intelligence menekankan perlunya bergerak melampaui pendekatan unimodal menuju arsitektur yang lebih holistik dan cerdas. Ini mendorong pentingnya integrasi sinergis antara kekuatan data-driven dan reasoning berbasis pengetahuan. Oleh karena itu, tugas ini mengembangkan sistem rekomendasi laptop berbasis Hybrid AI, yang secara cerdik menggabungkan rule-based reasoning dari KBS dan kemampuan adaptif machine learning. Pendekatan hibrida ini dirancang tidak hanya untuk mengatasi keterbatasan inheren dari masing-masing pendekatan, tetapi juga untuk menghasilkan sistem yang adaptif, tangguh, dan yang terpenting, dapat menjelaskan dasar rekomendasinya. Sistem ini bertransformasi dari sekadar alat klasifikasi menjadi sebuah sistem pendukung keputusan (decision support system) yang canggih, menggunakan soft scoring untuk menawarkan rekomendasi yang nuansatif dan terjustifikasi.
+
+1.2 Rumusan Masalah
+
+Penelitian ini berupaya menjawab beberapa pertanyaan kunci, yaitu:
+
+
+
+
+
+Bagaimana merancang arsitektur sistem AI yang secara efektif mengintegrasikan pengetahuan pakar dan pembelajaran mesin untuk mencapai sinergi yang optimal?
+
+
+
+Bagaimana mengimplementasikan Knowledge-Based System secara eksplisit sebagai hard constraints dalam konteks sistem rekomendasi yang dinamis?
+
+
+
+Bagaimana memanfaatkan machine learning sebagai komponen pendukung keputusan yang memberikan soft scoring dan fleksibilitas dalam proses rekomendasi?
+
+
+
+Bagaimana meningkatkan interpretabilitas dan explainability sistem rekomendasi AI agar keputusan yang dihasilkan dapat dipahami dan dipertanggungjawabkan?
+
+1.3 Tujuan
+
+Tujuan utama dari penelitian ini adalah:
+
+
+
+
+
+Mengembangkan dan mengimplementasikan sistem rekomendasi laptop berbasis Hybrid Advanced AI yang menggabungkan kekuatan symbolic reasoning dan sub-symbolic learning.
+
+
+
+Mengimplementasikan Knowledge-Based Reasoning untuk secara eksplisit merepresentasikan preferensi dan batasan pengguna, berfungsi sebagai fondasi penalaran simbolik.
+
+
+
+Mengintegrasikan algoritma Decision Tree sebagai komponen pembelajaran mesin yang mendukung soft scoring, melengkapi penalaran berbasis aturan.
+
+
+
+Menciptakan sistem rekomendasi yang tidak hanya akurat tetapi juga transparan dan dapat dijelaskan (explainable), memenuhi tuntutan Advanced AI.
+
+2. Landasan Teori
+
+2.1 Advanced Artificial Intelligence
+
+Advanced AI merujuk pada bidang studi yang melampaui pembelajaran statistik murni, dengan fokus pada pengembangan sistem yang tidak hanya belajar dari data, tetapi juga mampu melakukan reasoning, memiliki knowledge representation yang eksplisit, dan menyediakan explainability. Sistem Advanced AI secara intrinsik seringkali bersifat hibrida, adaptif terhadap perubahan lingkungan, dan berorientasi pada pemecahan masalah serta pengambilan keputusan yang kompleks dalam domain dunia nyata. Ini menekankan pentingnya tidak hanya "apa" yang diputuskan, tetapi juga "mengapa" keputusan tersebut diambil, menjadikannya krusial dalam aplikasi yang membutuhkan kepercayaan dan transparansi.
+
+2.2 Knowledge-Based System
+
+Knowledge-Based System adalah kategori sistem AI yang dirancang untuk menyimpan dan memanipulasi pengetahuan domain secara eksplisit, biasanya dalam bentuk aturan IF–THEN, frame, atau semantic network. Komponen utama KBS meliputi:
+
+
+
+
+
+Knowledge Base: Basis data yang berisi fakta-fakta spesifik dan heuristik (aturan) yang diperoleh dari pakar domain. Ini berfungsi sebagai repositori pengetahuan eksplisit sistem.
+
+
+
+Inference Engine: Mekanisme penalaran yang menggunakan aturan-aturan dalam knowledge base untuk menarik kesimpulan atau membuat keputusan. Ini bisa berupa forward chaining atau backward chaining.
+
+
+
+Explanation Facility: Modul krusial yang memungkinkan sistem untuk menjelaskan proses penalaran atau alur keputusan yang diambilnya. Dalam konteks sistem rekomendasi ini, explanation facility bukan hanya sebuah konsep teoritis, melainkan artefak fungsional yang menghasilkan narasi justifikasi keputusan. Ini menghubungkan rekomendasi akhir dengan aturan pakar yang dipicu dan skor probabilitas dari model machine learning, sehingga pengguna dapat memahami dasar setiap rekomendasi.
+
+2.3 Machine Learning dan Decision Tree
+
+Decision Tree merupakan salah satu algoritma supervised learning yang membangun model prediksi dalam bentuk struktur pohon keputusan. Pemilihan algoritma Decision Tree dalam sistem hibrida ini bukanlah semata-mata karena kesederhanaannya, melainkan didasarkan pada pertimbangan desain Advanced AI yang lebih mendalam, yaitu:
+
+
+
+
+
+Interpretabilitas Tinggi: Struktur pohon keputusan secara inheren mudah dipahami dan divisualisasikan. Setiap jalur dari akar ke daun merepresentasikan serangkaian kondisi yang mengarah pada keputusan tertentu, menjadikannya ideal untuk aplikasi yang memerlukan transparansi dan penjelasan langsung kepada pengguna. Ini sangat selaras dengan kebutuhan explainability dalam Advanced AI.
+
+
+
+Kompatibilitas dengan Symbolic Reasoning: Decision Tree beroperasi dengan membagi data berdasarkan ambang batas fitur, yang secara konseptual mirip dengan aturan IF-THEN dalam sistem simbolik. Kompatibilitas struktural ini memfasilitasi integrasi yang mulus dengan rule-based reasoning, di mana keputusan dari pohon dapat dengan mudah diinterpretasikan sebagai kondisi atau hasil dalam aturan logis, atau sebaliknya. Ini memungkinkan interoperabilitas antara komponen sub-symbolic dan symbolic dalam arsitektur hibrida.
+
+
+
+Dukungan untuk Probabilistic Output (predict_proba): Kemampuan Decision Tree untuk menghasilkan probabilitas kelas (soft scoring) sangat penting. Ini memungkinkan sistem tidak hanya untuk membuat keputusan biner, tetapi juga untuk memberikan tingkat kepercayaan atau "skor" pada setiap alternatif, yang kemudian dapat digunakan untuk ranking dan refinement rekomendasi. Ini menjauhkan sistem dari keputusan kaku dan biner, menuju pendekatan yang lebih nuansatif dan adaptif, menjadikannya komponen ideal untuk fungsi soft scoring dalam sistem pendukung keputusan.
+
+2.4 Hybrid AI
+
+Hybrid AI adalah pendekatan arsitektural yang menggabungkan kekuatan symbolic AI (seperti Knowledge-Based System) dan sub-symbolic AI (seperti Machine Learning). Dalam sistem rekomendasi laptop ini, integrasi ini terwujud secara strategis:
+
+
+
+
+
+Knowledge-based rules (dari KBS) digunakan sebagai hard constraints. Aturan-aturan ini menerapkan batasan kaku yang tidak dapat dinegosiasikan, seperti kriteria minimum RAM untuk profil "Gamer" atau batasan berat untuk "Pelajar". Ini efektif dalam menyaring opsi yang jelas-jelas tidak relevan atau tidak memenuhi syarat, menghindari masalah empty result set yang sering terjadi pada sistem ML murni yang terlalu kaku.
+
+
+
+Machine learning (dengan Decision Tree) digunakan untuk soft scoring dan ranking. Setelah hard constraints memangkas pilihan, model ML memberikan skor probabilitas atau preferensi pada kandidat yang tersisa. Ini memungkinkan sistem untuk tidak hanya mengeliminasi opsi, tetapi juga mengurutkan dan menyoroti rekomendasi terbaik di antara yang memenuhi syarat, memberikan fleksibilitas dan personalisasi yang lebih tinggi dibandingkan dengan sistem berbasis aturan murni. Pendekatan ini memungkinkan sistem rekomendasi untuk menjadi lebih adaptif dan responsif terhadap preferensi pengguna yang kompleks dan dinamis.
+
+3. Metodologi Penelitian / Perancangan Sistem
+
+3.1 Dataset
+
+Dataset yang digunakan dalam penelitian ini adalah Laptop.csv, yang memuat atribut spesifikasi laptop seperti:
+
+
+
+
+
+RAM
+
+
+
+Berat (kg)
+
+
+
+CPU (contoh: Intel i7, AMD Ryzen 5)
+
+
+
+GPU (contoh: Nvidia RTX 3050, AMD Radeon Graphics)
+
+
+
+Resolusi Layar (contoh: 1920x1080)
+
+
+
+Harga
+
+Dataset ini akan melalui tahap preprocessing untuk menangani nilai hilang, normalisasi, dan encoding fitur kategorikal, serta feature engineering untuk menciptakan variabel baru yang lebih relevan jika diperlukan, sebelum digunakan dalam proses pelatihan model machine learning.
+
+3.2 Arsitektur Sistem
+
+Alur kerja sistem secara konseptual dirancang untuk mengintegrasikan kedua komponen AI secara sekuensial dan komplementer:
+
+
+
+
+
+Input Pengguna: Pengguna memasukkan preferensi awal, seperti profil penggunaan (misalnya, Gamer, Pelajar, Profesional), batasan anggaran (budget), dan preferensi merek.
+
+
+
+Knowledge-Based Reasoning: Input pengguna diproses oleh inference engine yang menerapkan rule-based filtering. Tahap ini bertindak sebagai hard constraint, menyaring daftar laptop berdasarkan aturan pakar yang telah didefinisikan, menghasilkan subset kandidat yang memenuhi kriteria dasar.
+
+
+
+Machine Learning Scoring: Kandidat laptop yang lolos dari rule-based filtering kemudian dimasukkan ke dalam model Decision Tree. Model ini memberikan skor probabilitas (soft scoring) untuk setiap laptop berdasarkan kecocokan atributnya dengan profil atau preferensi umum dari data pelatihan, menawarkan tingkat fleksibilitas dan nuansa.
+
+
+
+Ranking & Output Rekomendasi: Laptop kemudian diurutkan berdasarkan skor yang dihasilkan oleh model machine learning dan ditampilkan kepada pengguna. Bersamaan dengan daftar rekomendasi, sistem juga menghasilkan penjelasan keputusan melalui Explanation Facility, yang menguraikan mengapa suatu laptop direkomendasikan, mengacu pada aturan pakar dan skor ML.
+
+3.3 Knowledge Base
+
+Knowledge base direpresentasikan dalam bentuk aturan eksplisit yang diturunkan dari pengetahuan pakar domain. Contoh aturan yang digunakan adalah:
+
+
+
+
+
+IF Profil = Gamer → RAM ≥ 16 GB AND GPU = Nvidia
+
+
+
+IF Profil = Pelajar → RAM ≥ 4 GB AND Berat ≤ 1.5 kg
+
+
+
+IF Profil = Desainer Grafis → RAM ≥ 8 GB AND Resolusi Layar ≥ 1920x1080
+
+Aturan-aturan ini berfungsi sebagai hard constraints utama sistem, memastikan bahwa rekomendasi awal secara fundamental sesuai dengan kebutuhan dan batasan yang dinyatakan oleh pengguna, mencegah rekomendasi yang jelas tidak relevan atau di luar batas.
+
+3.4 Inference Engine
+
+Inference engine dalam sistem ini bekerja dalam dua tahap yang saling melengkapi:
+
+
+
+
+
+Rule-based filtering: Tahap ini menerapkan hard constraints dengan membandingkan input pengguna dengan knowledge base. Ini adalah proses deduktif yang secara deterministik mengeliminasi opsi yang tidak memenuhi kriteria minimal yang ditetapkan oleh aturan pakar.
+
+
+
+Machine learning scoring: Setelah subset kandidat diperoleh dari tahap filtering, model Decision Tree digunakan untuk memberikan skor atau probabilitas kecocokan. Tahap ini bersifat induktif dan probabilistik, mewakili soft decision. Skor ini kemudian digunakan untuk ranking dan memberikan nuansa pada rekomendasi.
+
+Pendekatan dua tahap ini memastikan sistem tidak hanya akurat dalam memenuhi batasan keras tetapi juga fleksibel dan personal dalam memberikan pemeringkatan yang optimal, menjauhkan dari keputusan kaku yang berpotensi menghasilkan empty result set pada pendekatan berbasis aturan murni, atau rekomendasi yang tidak relevan pada ML murni.
+
+4. Implementasi Sistem
+
+Implementasi sistem dilakukan menggunakan lingkungan pengembangan populer dan pustaka ilmiah yang terkemuka:
+
+
+
+
+
+Bahasa pemrograman Python
+
+
+
+Lingkungan pengembangan Google Colab, yang menyediakan akses mudah ke sumber daya komputasi.
+
+
+
+Pustaka Pandas dan NumPy untuk efisiensi manipulasi data dan komputasi numerik.
+
+
+
+Pustaka Scikit-learn untuk implementasi algoritma Decision Tree dan utilitas machine learning lainnya.
+
+
+
+Pustaka ipywidgets untuk membangun antarmuka pengguna interaktif.
+
+Sistem ini dirancang untuk menyediakan antarmuka interaktif berbasis widget, memungkinkan pengguna berperan sebagai human-in-the-loop dalam proses rekomendasi. Pengguna dapat menyesuaikan preferensi secara iteratif dan melihat bagaimana perubahan tersebut memengaruhi rekomendasi dan justifikasinya, meningkatkan kepercayaan dan relevansi sistem.
+
+5. Hasil dan Pembahasan
+
+5.1 Hasil Sistem
+
+Sistem yang dikembangkan berhasil menunjukkan kapabilitasnya dalam berbagai skenario:
+
+
+
+
+
+Secara efektif menghasilkan rekomendasi laptop yang selaras dengan profil pengguna yang ditentukan (misalnya, Gamer, Pelajar) dan preferensi individu.
+
+
+
+Berhasil menyesuaikan hasil rekomendasi berdasarkan batasan anggaran dan preferensi merek yang spesifik, memvalidasi fungsi hard constraints.
+
+
+
+Mampu menampilkan hasil rekomendasi dalam format tabel yang terurut, dilengkapi dengan skor kecocokan dari model machine learning, serta penjelasan singkat yang dihasilkan oleh Explanation Facility.
+
+5.2 Pembahasan
+
+Pendekatan hibrida yang mengintegrasikan rule-based reasoning dan machine learning terbukti menghasilkan sistem rekomendasi yang lebih unggul dibandingkan dengan pendekatan klasifikasi tunggal atau sistem berbasis aturan murni. Secara kritis, penggunaan rule-based reasoning sebagai hard constraints efektif mencegah rekomendasi yang tidak relevan secara fundamental atau tidak memenuhi batasan minimum pengguna. Ini mengatasi masalah klasik pada sistem rekomendasi berbasis ML murni yang terkadang menghasilkan rekomendasi di luar batasan implisit atau eksplisit pengguna, atau pada sistem berbasis aturan murni yang terlalu kaku dan berpotensi menghasilkan empty result set jika tidak ada opsi yang secara sempurna cocok dengan semua aturan.
+
+Di sisi lain, integrasi machine learning memberikan fleksibilitas dan nuansa yang krusial dalam pemeringkatan alternatif yang telah lolos dari filter aturan pakar. Ini memungkinkan sistem untuk mengidentifikasi "terbaik di antara yang baik" berdasarkan pola yang dipelajari dari data, yang sulit dicapai hanya dengan aturan eksplisit. Pendekatan ML juga memungkinkan soft scoring, yang menjauhkan sistem dari keputusan biner kaku menuju rekomendasi yang lebih adaptif dan personal.
+
+Yang lebih penting, sistem ini secara signifikan meningkatkan interpretabilitas dan explainability. Setiap rekomendasi tidak hanya disajikan sebagai daftar, tetapi juga disertai dengan justifikasi keputusan yang dihasilkan oleh Explanation Facility. Justifikasi ini secara eksplisit mengacu pada aturan pakar yang dipicu (misalnya, "direkomendasikan karena memenuhi kriteria RAM minimal 16GB untuk profil Gamer") dan kontribusi skor dari model Decision Tree ("dengan skor kecocokan tinggi 0.85"). Ini memungkinkan pengguna untuk memahami logika di balik rekomendasi, membangun kepercayaan, dan membuat sistem ini lebih dari sekadar "kotak hitam" prediksi, menjadikannya sistem pendukung keputusan yang transparan sesuai standar Advanced AI.
+
+Refleksi kritis terhadap desain sistem menunjukkan bahwa penempatan rule-based filtering di awal alur kerja adalah keputusan strategis. Ini secara efisien memangkas ruang pencarian dan memastikan bahwa hanya kandidat yang relevan secara domain yang diteruskan ke model machine learning. Tanpa hard constraints ini, model ML mungkin akan menghabiskan sumber daya untuk mengevaluasi opsi yang secara domain sudah tidak relevan, atau menghasilkan rekomendasi yang tidak dapat diterima oleh pengguna, yang kemudian harus difilter secara pasca-pemrosesan. Sebaliknya, tanpa soft scoring dari ML, sistem hanya akan menghasilkan daftar opsi yang "memenuhi syarat" tanpa hierarki preferensi, mengurangi efektivitas rekomendasi. Desain hibrida ini, oleh karena itu, adalah kombinasi yang optimal untuk efisiensi, relevansi, dan explainability.
+
+6. Kesimpulan dan Saran
+
+6.1 Kesimpulan
+
+Dari hasil implementasi dan pembahasan, dapat disimpulkan bahwa:
+
+
+
+
+
+Sistem Hybrid AI yang menggabungkan rule-based reasoning dan machine learning terbukti sangat efektif dan unggul sebagai arsitektur untuk sistem rekomendasi laptop, mengatasi keterbatasan pendekatan tunggal.
+
+
+
+Penggunaan Knowledge-Based System sebagai hard constraints secara signifikan meningkatkan transparansi keputusan dan memastikan relevansi fundamental rekomendasi, mencegah hasil yang tidak valid atau empty result set.
+
+
+
+Algoritma Decision Tree adalah pilihan yang sangat cocok sebagai komponen soft scoring dalam sistem hibrida karena inheren interpretabilitasnya yang tinggi, kompatibilitasnya dengan penalaran simbolik, dan kemampuannya menghasilkan probabilitas (skor), yang semuanya krusial untuk explainability dan ranking.
+
+
+
+Sistem ini tidak hanya memenuhi kriteria Advanced Artificial Intelligence dengan kemampuannya untuk beradaptasi dan membuat keputusan, tetapi juga menyediakan penjelasan keputusan yang jelas dan terjustifikasi melalui Explanation Facility-nya.
+
+6.2 Saran
+
+Pengembangan selanjutnya dari sistem ini dapat meliputi:
+
+
+
+
+
+Penambahan Explainable AI per item rekomendasi yang lebih mendalam: Mengintegrasikan teknik XAI yang lebih canggih untuk memberikan justifikasi yang lebih detail mengapa atribut tertentu pada laptop berkontribusi pada skor kecocokan, misalnya dengan menggunakan nilai feature importance dari model atau visualisasi jalur keputusan pada Decision Tree.
+
+
+
+Integrasi optimasi multi-objektif: Memperluas kerangka kerja untuk mempertimbangkan beberapa tujuan rekomendasi secara simultan (misalnya, harga, performa, dan portabilitas) dalam proses soft scoring, menggunakan teknik seperti Pareto optimization.
+
+
+
+Implementasi berbasis web (misalnya, menggunakan Streamlit atau Flask): Mengembangkan antarmuka pengguna berbasis web untuk meningkatkan aksesibilitas, skalabilitas, dan kemampuan berbagi sistem kepada khalayak yang lebih luas.
+
+
+
+Penerapan pembelajaran adaptif berbasis umpan balik pengguna: Mengimplementasikan mekanisme di mana sistem dapat belajar dan menyesuaikan aturan atau bobot modelnya berdasarkan umpan balik eksplisit maupun implisit dari pengguna (misalnya, rating terhadap rekomendasi yang diberikan), untuk meningkatkan personalisasi dari waktu ke waktu.
+

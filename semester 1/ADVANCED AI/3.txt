@@ -1,0 +1,60 @@
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+
+# ==========================================
+# 1. PERSIAPAN DATA (Sama seperti sebelumnya)
+# ==========================================
+df = pd.read_csv('Laptop.csv', encoding='latin-1').drop_duplicates().dropna()
+
+# Feature Engineering
+df['Ram'] = df['Ram'].str.replace('GB', '').astype(int)
+df['Weight'] = df['Weight'].str.replace('kg', '').astype(float)
+df['Is_Nvidia'] = df['Gpu'].apply(lambda x: 1 if 'Nvidia' in str(x) else 0)
+df['Is_Intel'] = df['Cpu'].apply(lambda x: 1 if 'Intel' in str(x) else 0)
+df['Is_IPS'] = df['ScreenResolution'].apply(lambda x: 1 if 'IPS' in str(x) else 0)
+df['Is_Touch'] = df['ScreenResolution'].apply(lambda x: 1 if 'Touchscreen' in str(x) else 0)
+
+features = ['Ram', 'Weight', 'Is_Nvidia', 'Is_Intel', 'Is_IPS', 'Is_Touch']
+X = df[features]
+y = df['TypeName']
+
+# ==========================================
+# 2. SPLIT DATA (PENTING UNTUK EVALUASI)
+# ==========================================
+# Kita sisihkan 20% data untuk ujian (test_size=0.2)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Latih Model hanya pakai data Training
+clf_eval = DecisionTreeClassifier(max_depth=10, random_state=42)
+clf_eval.fit(X_train, y_train)
+
+# Prediksi data Ujian
+y_pred = clf_eval.predict(X_test)
+
+# ==========================================
+# 3. TAMPILKAN HASIL EVALUASI
+# ==========================================
+
+# A. Akurasi Total
+acc = accuracy_score(y_test, y_pred)
+print(f"🏆 Akurasi Model: {acc*100:.2f}%")
+print("-" * 30)
+
+# B. Laporan Lengkap (Precision, Recall, F1-Score)
+print("📄 Classification Report:\n")
+print(classification_report(y_test, y_pred))
+
+# C. Visualisasi Confusion Matrix (Tabel Kebenaran)
+plt.figure(figsize=(10, 6))
+cm = confusion_matrix(y_test, y_pred)
+sns.heatmap(cm, annot=True, fmt='d', cmap='Blues',
+            xticklabels=clf_eval.classes_,
+            yticklabels=clf_eval.classes_)
+plt.xlabel('Prediksi AI')
+plt.ylabel('Kenyataan (Data Asli)')
+plt.title('Confusion Matrix (Evaluasi Kesalahan)')
+plt.show()

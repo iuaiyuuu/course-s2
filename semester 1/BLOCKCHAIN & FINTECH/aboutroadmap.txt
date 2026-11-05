@@ -1,0 +1,173 @@
+6. About Token
+
+a. Nama Token
+
+SVARA GovToken
+
+b. Nilai Token
+
+SVARA GovToken merupakan representasi digital dari mata uang Rupiah Indonesia. Nilainya ditetapkan secara stabil pada rasio 1 GovToken setara dengan 1 Rupiah dan bersifat non-spekulatif. Penetapan nilai yang tetap ini menegaskan fungsi GovToken sebagai alat transaksi dan pencatat nilai yang konsisten dalam ekosistem keuangan negara, berbeda dengan aset kripto yang nilainya berfluktuasi.
+
+c. Pasokan Token
+
+Pasokan SVARA GovToken bersifat dinamis dan tidak mengikuti model fixed supply yang umum pada banyak aset kripto. GovToken akan dicetak (minted) dan dimusnahkan (burned) sesuai kebutuhan aktual Anggaran Pendapatan dan Belanja Negara dan Anggaran Pendapatan dan Belanja Daerah. Kendali penuh atas pasokan GovToken berada di bawah kebijakan fiskal negara, yang diatur oleh otoritas keuangan pemerintah. Hal ini secara fundamental menempatkan GovToken sebagai instrumen tata kelola keuangan publik, bukan sebagai alat investasi atau spekulasi. Fungsinya adalah untuk mendukung efisiensi, transparansi, dan akuntabilitas dalam pengelolaan dana publik.
+
+7. Road Maps
+
+Implementasi SVARA adalah inisiatif strategis yang akan dijalankan melalui peta jalan terstruktur dan bertahap, memastikan pembangunan sistem yang kokoh dan adopsi yang berkelanjutan di seluruh tingkatan pemerintahan. Peta jalan ini mencakup fase desain, pembangunan infrastruktur, pembentukan regulasi, integrasi kelembagaan, serta ekspansi nasional, dengan penekanan pada keamanan, transparansi, dan akuntabilitas.
+
+Tahun 1 – Build and Pilot
+
+Fase ini berfokus pada pembangunan fondasi teknis, perumusan regulasi, dan pengujian awal SVARA dalam lingkungan terkontrol.
+
+
+
+
+
+Q1: Desain & Regulasi
+
+
+
+
+
+Fokus: Perancangan arsitektur sistem SVARA secara detail, termasuk spesifikasi teknis GovToken, pengembangan mekanisme smart contract untuk kontrol fiskal, dan model tata kelola blockchain. Paralel dengan itu, penyusunan kerangka regulasi dan kebijakan pendukung yang melibatkan Kementerian Keuangan, Bank Indonesia, dan lembaga terkait untuk memastikan keselarasan dengan ketentuan hukum dan kebijakan fiskal yang berlaku.
+
+
+
+Tujuan: Menghasilkan cetak biru (blueprint) teknis dan hukum yang komprehensif, serta mendapatkan persetujuan awal dari regulator kunci.
+
+
+
+Dampak Strategis: Memberikan fondasi teknis dan legal yang kuat, legitimasi, dan arah pengembangan yang jelas untuk SVARA.
+
+
+
+Q2: Infrastruktur Inti
+
+
+
+
+
+Fokus: Pembangunan infrastruktur blockchain inti yang bersifat permissioned, termasuk implementasi jaringan node validator dengan mekanisme konsensus PoA + PoS, serta pengembangan modul GovToken dan sistem dual ledger (publik dan internal). Prioritas utama adalah aspek keamanan siber dan ketahanan sistem.
+
+
+
+Tujuan: Tersedianya platform blockchain dasar yang fungsional, aman, dan stabil untuk mendukung operasional SVARA.
+
+
+
+Dampak Strategis: Kesiapan teknologi fundamental yang teruji untuk memproses transaksi keuangan negara dalam lingkungan blockchain.
+
+
+
+Q3: Integrasi Sistem
+
+
+
+
+
+Fokus: Pengembangan antarmuka pemrograman aplikasi dan konektor untuk mengintegrasikan SVARA dengan sistem informasi keuangan pemerintah yang telah ada (misalnya, sistem anggaran, sistem pengadaan, dan sistem pembayaran). Implementasi fitur QRIS yang terintegrasi sebagai jalur pembayaran resmi pemerintah.
+
+
+
+Tujuan: Mencapai interoperabilitas dan sinkronisasi data antara SVARA dengan ekosistem digital pemerintah yang lebih luas.
+
+
+
+Dampak Strategis: Peningkatan efisiensi operasional dan eliminasi silo data antar sistem keuangan negara.
+
+
+
+Q4: Pilot Daerah
+
+
+
+
+
+Fokus: Pelaksanaan uji coba terbatas SVARA di beberapa pemerintah daerah atau kementerian/lembaga terpilih. Lingkup uji coba mencakup siklus anggaran, pengadaan barang dan jasa, serta proses pembayaran kepada vendor menggunakan GovToken dalam skenario nyata. Pengumpulan data kinerja, umpan balik pengguna, dan identifikasi masalah.
+
+
+
+Tujuan: Memvalidasi fungsionalitas, keamanan, dan efisiensi model operasional SVARA di lingkungan lapangan.
+
+
+
+Dampak Strategis: Perolehan data empiris dan pembelajaran krusial untuk penyempurnaan sistem dan demonstrasi konkret manfaat SVARA sebelum ekspansi.
+
+Tahun 2 – Scale and National Readiness
+
+Fase ini diarahkan pada peningkatan skala implementasi, penguatan stabilitas dan keamanan sistem, serta persiapan SVARA untuk adopsi nasional penuh.
+
+
+
+
+
+Q1: Stabilitas & Keamanan
+
+
+
+
+
+Fokus: Evaluasi mendalam terhadap hasil pilot daerah, dilanjutkan dengan optimalisasi performa sistem, penguatan protokol keamanan siber, dan pengembangan kapabilitas penanggulangan insiden. Peningkatan kapasitas infrastruktur untuk menangani volume transaksi yang lebih besar dan peninjauan kerangka regulasi berdasarkan pengalaman pilot.
+
+
+
+Tujuan: Memastikan SVARA beroperasi secara stabil, aman, dan tangguh terhadap berbagai ancaman operasional maupun siber.
+
+
+
+Dampak Strategis: Peningkatan kepercayaan terhadap integritas dan keandalan SVARA sebagai infrastruktur keuangan kritikal negara.
+
+
+
+Q2: Perluasan Wilayah
+
+
+
+
+
+Fokus: Ekspansi implementasi SVARA secara bertahap ke lebih banyak pemerintah daerah dan kementerian/lembaga. Penyelenggaraan pelatihan intensif bagi aparatur sipil negara dan sosialisasi kepada seluruh pemangku kepentingan, termasuk vendor pemerintah. Integrasi dengan lembaga pengawas seperti Badan Pemeriksa Keuangan dan Komisi Pemberantasan Korupsi untuk audit dan pengawasan berbasis teknologi.
+
+
+
+Tujuan: Meningkatkan cakupan geografis dan fungsional SVARA di seluruh wilayah Indonesia.
+
+
+
+Dampak Strategis: Peningkatan signifikan dalam transparansi dan akuntabilitas pengelolaan keuangan di berbagai tingkatan pemerintahan.
+
+
+
+Q3: Transparansi Publik
+
+
+
+
+
+Fokus: Pengembangan dan peluncuran portal publik yang interaktif dan mudah diakses, menyajikan data transaksi keuangan negara dari SVARA secara real-time kepada masyarakat. Pelaksanaan sosialisasi masif kepada publik mengenai manfaat SVARA dan cara mengakses informasi yang tersedia.
+
+
+
+Tujuan: Meningkatkan partisipasi publik dalam pengawasan keuangan negara dan memperkuat kepercayaan masyarakat terhadap tata kelola pemerintahan.
+
+
+
+Dampak Strategis: Terwujudnya tata kelola keuangan yang transparan dan partisipatif, mendorong keterlibatan masyarakat yang lebih besar dalam pengawasan.
+
+
+
+Q4: Siap Nasional
+
+
+
+
+
+Fokus: Finalisasi seluruh aspek teknis, regulasi, operasional, dan kelembagaan SVARA untuk implementasi penuh secara nasional. Penandatanganan komitmen dan kebijakan final oleh seluruh pemangku kepentingan utama. Pembentukan unit operasional dan dukungan jangka panjang untuk keberlanjutan sistem.
+
+
+
+Tujuan: SVARA dioperasikan sebagai sistem keuangan digital utama pemerintah secara nasional.
+
+
+
+Dampak Strategis: Transformasi fundamental tata kelola keuangan publik Indonesia menuju era digital yang bersih, efisien, dan berintegritas.

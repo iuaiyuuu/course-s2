@@ -1,0 +1,119 @@
+import pandas as pd
+import numpy as np
+import ipywidgets as widgets
+from IPython.display import display, clear_output
+from sklearn.tree import DecisionTreeClassifier
+
+# ==========================================
+# 1. LOAD & TRAINING (Hanya jalan 1x di awal)
+# ==========================================
+print("Sedang memproses data... (Tunggu sebentar)")
+
+# Load Data
+try:
+    df = pd.read_csv('Laptop.csv', encoding='latin-1')
+except:
+    df = pd.read_csv('Laptop.csv')
+
+# Cleaning Cepat
+df = df.drop_duplicates().dropna()
+df['Ram'] = df['Ram'].str.replace('GB', '').astype(int)
+df['Weight'] = df['Weight'].str.replace('kg', '').astype(float)
+df['Price_IDR'] = df['Price_in_euros'] * 17000
+
+# Feature Engineering
+df['Is_Nvidia'] = df['Gpu'].apply(lambda x: 1 if 'Nvidia' in str(x) else 0)
+df['Is_Intel'] = df['Cpu'].apply(lambda x: 1 if 'Intel' in str(x) else 0)
+df['Is_IPS'] = df['ScreenResolution'].apply(lambda x: 1 if 'IPS' in str(x) else 0)
+df['Is_Touch'] = df['ScreenResolution'].apply(lambda x: 1 if 'Touchscreen' in str(x) else 0)
+
+# Training Model
+features = ['Ram', 'Weight', 'Is_Nvidia', 'Is_Intel', 'Is_IPS', 'Is_Touch']
+X = df[features]
+y = df['TypeName']
+clf = DecisionTreeClassifier(max_depth=10, random_state=42)
+clf.fit(X, y)
+
+print("✅ Data Siap! Aplikasi berjalan di bawah ini.\n" + "="*50)
+
+# ==========================================
+# 2. INTERFACE IPYWIDGETS (Tanpa Server)
+# ==========================================
+
+# -- WIDGETS INPUT --
+w_profil = widgets.Dropdown(
+    options=['Umum', 'Pelajar', 'Desainer', 'Programmer', 'Gamer', 'Content Creator'],
+    value='Umum', description='👤 Profil:', style={'description_width': 'initial'}
+)
+
+w_budget = widgets.IntSlider(
+    value=10000000, min=3000000, max=50000000, step=500000,
+    description='💰 Budget (Rp):', style={'description_width': 'initial'},
+    layout=widgets.Layout(width='50%')
+)
+
+w_merek = widgets.SelectMultiple(
+    options=sorted(df['Company'].unique()),
+    description='🏷️ Filter Merek:', style={'description_width': 'initial'}
+)
+
+btn_cari = widgets.Button(
+    description='Cari Rekomendasi',
+    button_style='info', # 'success', 'info', 'warning', 'danger'
+    icon='search', layout=widgets.Layout(width='50%')
+)
+
+out = widgets.Output()
+
+# -- LOGIKA PROGRAM --
+def on_click_cari(b):
+    with out:
+        clear_output()
+
+        # 1. Tentukan Spek Ideal
+        input_data = pd.DataFrame([np.zeros(len(features))], columns=features)
+        prof = w_profil.value
+
+        if prof == 'Gamer':
+            input_data['Ram'] = 16; input_data['Weight'] = 2.5; input_data['Is_Nvidia'] = 1
+        elif prof in ['Desainer', 'Content Creator']:
+            input_data['Ram'] = 16; input_data['Weight'] = 2.0; input_data['Is_Nvidia'] = 1; input_data['Is_IPS'] = 1
+        elif prof == 'Programmer':
+            input_data['Ram'] = 16; input_data['Is_Intel'] = 1; input_data['Is_IPS'] = 1
+        elif prof == 'Pelajar':
+            input_data['Ram'] = 4; input_data['Weight'] = 1.2
+        else: # Umum
+            input_data['Ram'] = 8; input_data['Weight'] = 1.5
+
+        # 2. Prediksi & Filter
+        prediksi = clf.predict(input_data)[0]
+
+        hasil = df[
+            (df['TypeName'] == prediksi) &
+            (df['Price_IDR'] <= w_budget.value)
+        ]
+
+        if w_merek.value:
+            hasil = hasil[hasil['Company'].isin(w_merek.value)]
+
+        hasil = hasil.sort_values('Price_IDR', ascending=False)
+
+        # 3. Tampilkan
+        print(f"🤖 Rekomendasi AI: {prediksi}")
+        print(f"🔍 Ditemukan {len(hasil)} laptop sesuai budget.")
+
+        if not hasil.empty:
+            tampil = hasil[['Company', 'Product', 'Cpu', 'Ram', 'Gpu', 'Price_IDR']].head(10).copy()
+            tampil['Price_IDR'] = tampil['Price_IDR'].apply(lambda x: f"Rp {x:,.0f}")
+            display(tampil)
+        else:
+            print("Tips: Coba naikkan budget atau pilih merek lain.")
+
+btn_cari.on_click(on_click_cari)
+
+# Tampilkan Layout
+ui = widgets.VBox([
+    widgets.HTML("<h2>⚡ Laptop Rekomendasi </h2>"),
+    w_profil, w_budget, w_merek, btn_cari
+])
+display(ui, out)
