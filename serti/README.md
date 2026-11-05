@@ -2,9 +2,11 @@
 
 Index sertifikat yang disusun per program. Isi kursus Google diambil dari halaman profil Coursera.
 
+**Sertifikat utama ada di [HIGHLIGHT](HIGHLIGHT/).** Folder per-program di bawah berisi PDF sertifikat tiap kursus.
+
 ## Google AI Specialization (Coursera) — selesai 16 Mei 2026
 
-Sertifikat PDF: `HIGHLIGHT/GOOGLE AI.pdf` dan `DOUBLE/25.51.1738_M.Abiyyu Rahman_Coursera google AI.pdf`
+Sertifikat PDF: [HIGHLIGHT/GOOGLE AI.pdf](HIGHLIGHT/GOOGLE%20AI.pdf)
 
 1. AI Fundamentals
 2. AI for Brainstorming and Planning
@@ -55,5 +57,5 @@ Folder: [Lainnya](Lainnya/) — berkas gambar yang belum diidentifikasi.
 
 ## Catatan
 
-- Folder `DOUBLE/` dan `HIGHLIGHT/` berisi salinan dari sertifikat di atas (dengan nama berawalan NIM). Belum dihapus; silakan dicek sebelum dihapus.
-- Beberapa kursus punya dua file: `Tools of the Trade` (2 file), `Play It Safe` (3 file), `Connect and Protect` (2 file), `Google Data Analytics` (dan capstone) — sebagian besar merupakan salinan.
+- Folder `DOUBLE/` berisi salinan sertifikat dengan nama berawalan NIM. Belum dihapus.
+- Beberapa kursus punya lebih dari satu file (misalnya `Tools of the Trade`, `Play It Safe`, `Connect and Protect`). Itu salinan dengan nama berbeda; satu saja sudah cukup.
