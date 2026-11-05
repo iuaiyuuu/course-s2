@@ -1,6 +1,6 @@
 # MT101 — Data Science
 
-Arsip materi dari Waskita (LMS AMIKOM), kursus **MT101 - DATA SCIENCE**, Program Magister Teknik Informatika, konsentrasi Digital Transformation Intelligence.
+Arsip materi dari Waskita (LMS AMIKOM), kursus **MT101 - DATA SCIENCE**, Program Magister Teknik Informatika.
 
 Total file: **30** (23 .pdf, 4 .pptx, 2 .docx, 1 .xlsx). Berkas ada di folder [Waskita Arsip](Waskita%20Arsip/).
 

@@ -1,6 +1,6 @@
 # MT100 — Advanced Artificial Intelligence
 
-Arsip materi dari Waskita (LMS AMIKOM), kursus **MT100 - ADVANCED ARTIFICIAL INTELLIGENCE**, Program Magister Teknik Informatika, konsentrasi Digital Transformation Intelligence.
+Arsip materi dari Waskita (LMS AMIKOM), kursus **MT100 - ADVANCED ARTIFICIAL INTELLIGENCE**, Program Magister Teknik Informatika.
 
 Total file: **20** (11 .pdf, 8 .pptx, 1 .doc). Berkas ada di folder [Waskita Arsip](Waskita%20Arsip/).
 

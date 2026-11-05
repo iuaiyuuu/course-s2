@@ -1,6 +1,6 @@
 # MT102 — Research Methodology
 
-Arsip materi dari Waskita (LMS AMIKOM), kursus **MT102 - RESEARCH METHODOLOGY**, Program Magister Teknik Informatika, konsentrasi Digital Transformation Intelligence.
+Arsip materi dari Waskita (LMS AMIKOM), kursus **MT102 - RESEARCH METHODOLOGY**, Program Magister Teknik Informatika.
 
 Total file: **66** (62 .pdf, 2 .pptx, 1 .ppt, 1 .docx). Berkas ada di folder [Waskita Arsip](Waskita%20Arsip/).
 

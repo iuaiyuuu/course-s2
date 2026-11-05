@@ -1,6 +1,6 @@
 # MT106 — Strategic Information System Planning
 
-Arsip materi dari Waskita (LMS AMIKOM), kursus **MT106 - STRATEGIC INFORMATION SYSTEM PLANNING**, Program Magister Teknik Informatika, konsentrasi Digital Transformation Intelligence.
+Arsip materi dari Waskita (LMS AMIKOM), kursus **MT106 - STRATEGIC INFORMATION SYSTEM PLANNING**, Program Magister Teknik Informatika.
 
 Total file: **65** (63 .pdf, 1 .xlsx, 1 .pptx). Berkas ada di folder [Waskita Arsip](Waskita%20Arsip/).
 

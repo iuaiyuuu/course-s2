@@ -1,6 +1,6 @@
 # MT105 — Blockchain and Fintech
 
-Arsip materi dari Waskita (LMS AMIKOM), kursus **MT105 - BLOCKCHAIN AND FINTECH**, Program Magister Teknik Informatika, konsentrasi Digital Transformation Intelligence.
+Arsip materi dari Waskita (LMS AMIKOM), kursus **MT105 - BLOCKCHAIN AND FINTECH**, Program Magister Teknik Informatika.
 
 Total file: **6** (4 .pdf, 2 .png). Berkas ada di folder [Waskita Arsip](Waskita%20Arsip/).
 

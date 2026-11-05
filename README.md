@@ -1,6 +1,6 @@
 # Kuliah S2 Informatika — Materi, Tugas, dan Portofolio
 
-Repositori ini berisi kumpulan materi, tugas, laporan, dan portofolio selama kuliah Magister Informatika di Universitas AMIKOM Yogyakarta, konsentrasi *Digital Transformation Intelligence*. Repo ini dibuka untuk umum agar bisa dipelajari, misalnya contoh laporan tugas, penerapan Decision Tree, benchmark Hadoop vs Spark, atau struktur sebuah proposal tesis.
+Repositori ini berisi kumpulan materi, tugas, laporan, dan portofolio selama kuliah Magister Informatika di Universitas AMIKOM Yogyakarta. Repo ini dibuka untuk umum agar bisa dipelajari, misalnya contoh laporan tugas, penerapan Decision Tree, benchmark Hadoop vs Spark, atau struktur sebuah proposal tesis.
 
 Pemilik: **Muhammad Abiyyu Rahman**
 
